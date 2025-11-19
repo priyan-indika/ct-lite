@@ -26,10 +26,8 @@ namespace PractTest.Application.Services
         public async Task<CustomerDto?> GetCustomerByIdAsync(int id)
         {
             var customer = await _customerRepository.GetCustomerByIdAsync(id);
-            if (customer == null)
-            {
-                return null;
-            }
+            if (customer is null) return null;
+
             var customerDto = _mapper.Map<CustomerDto>(customer);
             return customerDto;
         }
@@ -40,21 +38,28 @@ namespace PractTest.Application.Services
             customer.Username = createCustomerDto.Name.ToLower();
             customer.Password = createCustomerDto.Name.ToUpper();
             customer.CreatedBy = 1000;
+
             var customerCreated = await _customerRepository.CreateCustomerAsync(customer);
-            if (customerCreated == null)
-            {
-                return null;
-            }
+            if (customerCreated is null) return null;
+
             var customerDto = _mapper.Map<CustomerDto>(customerCreated);
             return customerDto;
         }
 
-        public async Task<CustomerDto?> UpdateCustomerAsync(UpdateCustomerDto updatedCustomerDto)
+        public async Task<CustomerDto?> UpdateCustomerAsync(int id, UpdateCustomerDto customerDto)
         {
-            var customer = _mapper.Map<Customer>(updatedCustomerDto);
-            var updatedCustomer = await _customerRepository.UpdateCustomerAsync(customer);
-            var customerDto = updatedCustomer == null ? null : _mapper.Map<CustomerDto>(updatedCustomer);
-            return customerDto;
+            var existingCustomer = await _customerRepository.GetCustomerByIdAsync(id);
+            if (existingCustomer is null) return null;
+
+            existingCustomer.Name = customerDto.Name;
+            existingCustomer.Email = customerDto.Email;
+            existingCustomer.LoyaltyPoints = customerDto.LoyaltyPoints;
+
+            var updatedCustomer = await _customerRepository.UpdateCustomerAsync(existingCustomer);
+            if (updatedCustomer is null) return null;
+
+            var updatedCustomerDto = _mapper.Map<CustomerDto>(updatedCustomer);
+            return updatedCustomerDto;
         }
     }
 }

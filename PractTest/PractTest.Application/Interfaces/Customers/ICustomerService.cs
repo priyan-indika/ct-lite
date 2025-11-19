@@ -7,6 +7,6 @@ namespace PractTest.Application.Interfaces.Customers
         Task<IEnumerable<CustomerDto>> GetAllCustomerAsync();
         Task<CustomerDto?> GetCustomerByIdAsync(int id);
         Task<CustomerDto?> CreateCustomerAsync(CreateCustomerDto customerDto);
-        Task<CustomerDto?> UpdateCustomerAsync(UpdateCustomerDto customerDto);
+        Task<CustomerDto?> UpdateCustomerAsync(int id, UpdateCustomerDto customerDto);
     }
 }

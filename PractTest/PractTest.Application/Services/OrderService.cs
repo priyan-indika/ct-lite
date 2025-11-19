@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
 using PractTest.Application.DTOs;
 using PractTest.Application.Interfaces.Customers;
+using PractTest.Application.Interfaces.Orders;
 using PractTest.Domain.Entities;
 
-namespace PractTest.Application.Interfaces.Orders
+namespace PractTest.Application.Services
 {
     public class OrderService : IOrderService
     {
@@ -31,7 +32,7 @@ namespace PractTest.Application.Interfaces.Orders
             var customer = await _customerService.GetCustomerByIdAsync(createdOrder.CustomerId);
             var updateCustomerDto = _mapper.Map<UpdateCustomerDto>(customer);
             updateCustomerDto.LoyaltyPoints = updateCustomerDto.LoyaltyPoints + (int)(createdOrder.OrderTotal / 10);
-            await _customerService.UpdateCustomerAsync(updateCustomerDto);
+            await _customerService.UpdateCustomerAsync(customer.Id, updateCustomerDto);
 
             var orderDto = _mapper.Map<OrderDto>(createdOrder);
             return orderDto;

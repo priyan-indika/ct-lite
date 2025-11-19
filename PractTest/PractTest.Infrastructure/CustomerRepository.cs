@@ -34,7 +34,6 @@ namespace PractTest.Infrastructure
 
         public async Task<Customer> UpdateCustomerAsync(Customer customer)
         {
-            _dbContext.Customers.Update(customer);
             await _dbContext.SaveChangesAsync();
             return customer;
         }

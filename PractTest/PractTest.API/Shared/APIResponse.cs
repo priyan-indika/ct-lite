@@ -16,9 +16,9 @@
             };
         }
 
-        public static APIResponse<string> Error(string message, string error, int statusCode = StatusCodes.Status500InternalServerError)
+        public static APIResponse<T> Error(string message, T error, int statusCode = StatusCodes.Status500InternalServerError)
         {
-            return new APIResponse<string>
+            return new APIResponse<T>
             {
                 StatusCode = statusCode,
                 Message = message,

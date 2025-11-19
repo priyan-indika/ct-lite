@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PractTest.API.Shared;
 using PractTest.Application.DTOs;
-using PractTest.Application.DTOValidations;
 using PractTest.Application.Interfaces.Customers;
 
 namespace PractTest.API.Controllers
@@ -54,7 +53,7 @@ namespace PractTest.API.Controllers
             try
             {
                 var customer = await _customerService.GetCustomerByIdAsync(id);
-                if (customer == null)
+                if (customer is null)
                 {
                     return StatusCode(StatusCodes.Status404NotFound, APIResponse<string>.Error("No customer found.", string.Empty, StatusCodes.Status404NotFound));
                 }
@@ -78,11 +77,11 @@ namespace PractTest.API.Controllers
                 var validatorResult = await _createCustomerValidator.ValidateAsync(customerDto);
                 if (!validatorResult.IsValid)
                 {
-                    return BadRequest(validatorResult.Errors);
+                    return BadRequest(APIResponse<IList<FluentValidation.Results.ValidationFailure>>.Error("Validation errors.", validatorResult.Errors));
                 }
 
                 var createdCustomer = await _customerService.CreateCustomerAsync(customerDto);
-                if (createdCustomer == null)
+                if (createdCustomer is null)
                 {
                     //return StatusCode(StatusCodes.Status304NotModified, APIResponse<string>.Error("Customer not created.", string.Empty, StatusCodes.Status304NotModified));
                     return BadRequest(APIResponse<string>.Error("Customer not created.", string.Empty));
@@ -94,6 +93,29 @@ namespace PractTest.API.Controllers
             {
                 _logger.LogError(ex, "Error creating customer");
                 return StatusCode(StatusCodes.Status500InternalServerError, APIResponse<string>.Error("Error in creating customer", ex.Message));
+            }
+        }
+
+        [HttpPut("{id}")]
+        [ProducesResponseType(typeof(APIResponse<CustomerDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult> UpdateCustomer([FromRoute] int id, [FromBody] UpdateCustomerDto customerDto)
+        {
+            try
+            {
+                var result = await _customerService.UpdateCustomerAsync(id, customerDto);
+                if (result is null)
+                {
+                    return NotFound(APIResponse<string>.Error("Customer not found or update failed.", string.Empty));
+                }
+                return Ok(APIResponse<CustomerDto>.Success(result, "Customer updated successfully."));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating customer");
+                return StatusCode(StatusCodes.Status500InternalServerError, APIResponse<string>.Error("Error in updating customer", ex.Message));
             }
         }
     }
