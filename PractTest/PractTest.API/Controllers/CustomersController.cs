@@ -98,7 +98,6 @@ namespace PractTest.API.Controllers
 
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(APIResponse<CustomerDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> UpdateCustomer([FromRoute] int id, [FromBody] UpdateCustomerDto customerDto)
@@ -116,6 +115,33 @@ namespace PractTest.API.Controllers
             {
                 _logger.LogError(ex, "Error updating customer");
                 return StatusCode(StatusCodes.Status500InternalServerError, APIResponse<string>.Error("Error in updating customer", ex.Message));
+            }
+        }
+
+        [HttpPatch("{id}")]
+        [ProducesResponseType(typeof(APIResponse<CustomerDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult> UpdateLoyaltyPoints([FromRoute] int id, [FromQuery] int loyalty)
+        {
+            if (loyalty < 0)
+            {
+                return BadRequest(APIResponse<string>.Error("Loyalty points should be positive.", string.Empty));
+            }
+            try
+            {
+                var result = await _customerService.UpdateLoyaltyPointsAsync(id, loyalty);
+                if (result is null)
+                {
+                    return NotFound(APIResponse<string>.Error("Customer not found or update failed.", string.Empty));
+                }
+                return Ok(APIResponse<CustomerDto>.Success(result, "Loyalty points updated successfully."));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating loyalty points");
+                return StatusCode(StatusCodes.Status500InternalServerError, APIResponse<string>.Error("Error in updating loyalty points", ex.Message));
             }
         }
     }

@@ -61,5 +61,19 @@ namespace PractTest.Application.Services
             var updatedCustomerDto = _mapper.Map<CustomerDto>(updatedCustomer);
             return updatedCustomerDto;
         }
+
+        public async Task<CustomerDto?> UpdateLoyaltyPointsAsync(int id, int loyalty)
+        {
+            var existingCustomer = await _customerRepository.GetCustomerByIdAsync(id);
+            if (existingCustomer is null) return null;
+
+            existingCustomer.LoyaltyPoints = loyalty;
+
+            var updatedCustomer = await _customerRepository.UpdateCustomerAsync(existingCustomer);
+            if (updatedCustomer is null) return null;
+
+            var customerDto = _mapper.Map<CustomerDto>(updatedCustomer);
+            return customerDto;
+        }
     }
 }

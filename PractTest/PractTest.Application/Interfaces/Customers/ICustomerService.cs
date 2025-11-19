@@ -8,5 +8,6 @@ namespace PractTest.Application.Interfaces.Customers
         Task<CustomerDto?> GetCustomerByIdAsync(int id);
         Task<CustomerDto?> CreateCustomerAsync(CreateCustomerDto customerDto);
         Task<CustomerDto?> UpdateCustomerAsync(int id, UpdateCustomerDto customerDto);
+        Task<CustomerDto?> UpdateLoyaltyPointsAsync(int id, int loyalty);
     }
 }

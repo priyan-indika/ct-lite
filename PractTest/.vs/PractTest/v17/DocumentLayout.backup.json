@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|solutionrelative:practtest.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|solutionrelative:practtest.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.api\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|solutionrelative:practtest.api\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|solutionrelative:practtest.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -76,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CustomersController.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Controllers\\CustomersController.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Controllers\\CustomersController.cs",
@@ -118,26 +118,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Controllers\\OrdersController.cs",
               "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "PractTest.API\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T10:51:59.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GlobalExceptionMiddleware.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Middleware\\GlobalExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Middleware\\GlobalExceptionMiddleware.cs",
               "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Middleware\\GlobalExceptionMiddleware.cs",
               "RelativeToolTip": "PractTest.API\\Middleware\\GlobalExceptionMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T10:50:39.04Z",
               "EditorCaption": ""
