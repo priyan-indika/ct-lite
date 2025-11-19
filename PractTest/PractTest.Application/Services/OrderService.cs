@@ -9,13 +9,13 @@ namespace PractTest.Application.Services
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
-        private readonly ICustomerService _customerService;
+        private readonly ICustomerRepository _customerRepository;
         private readonly IMapper _mapper;
 
-        public OrderService(IOrderRepository orderRepository, ICustomerService customerService, IMapper mapper)
+        public OrderService(IOrderRepository orderRepository, ICustomerRepository customerRepository, IMapper mapper)
         {
             _orderRepository = orderRepository;
-            _customerService = customerService;
+            _customerRepository = customerRepository;
             _mapper = mapper;
         }
 
@@ -23,16 +23,14 @@ namespace PractTest.Application.Services
         {
             var order = _mapper.Map<Order>(createOrderDto);
             var createdOrder = await _orderRepository.CreateOrderAsync(order);
+            if (createdOrder == null) return null;
 
-            if (createdOrder == null)
-            {
-                return null;
-            }
+            var customer = await _customerRepository.GetCustomerByIdAsync(createdOrder.CustomerId);
+            if (customer is null) return null;
 
-            var customer = await _customerService.GetCustomerByIdAsync(createdOrder.CustomerId);
-            var updateCustomerDto = _mapper.Map<UpdateCustomerDto>(customer);
-            updateCustomerDto.LoyaltyPoints = updateCustomerDto.LoyaltyPoints + (int)(createdOrder.OrderTotal / 10);
-            await _customerService.UpdateCustomerAsync(customer.Id, updateCustomerDto);
+            customer.LoyaltyPoints = customer.LoyaltyPoints + (int)(createdOrder.OrderTotal / 10);
+            var updatedCustomer = await _customerRepository.UpdateCustomerAsync(customer);
+            if (updatedCustomer is null) return null;
 
             var orderDto = _mapper.Map<OrderDto>(createdOrder);
             return orderDto;
