@@ -3,6 +3,7 @@ using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PractTest.API.Filters;
+using PractTest.API.Middleware;
 using PractTest.Application;
 using PractTest.Application.DTOValidations;
 using PractTest.Application.Interfaces.Customers;
@@ -43,6 +44,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.MapControllers();
 
