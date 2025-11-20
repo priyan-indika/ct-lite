@@ -120,7 +120,7 @@ namespace PractTest.API.Controllers
 
         [HttpPatch("{id}")]
         [ProducesResponseType(typeof(APIResponse<CustomerDto>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(APIResponse<string>), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> UpdateLoyaltyPoints([FromRoute] int id, [FromQuery] int loyalty)

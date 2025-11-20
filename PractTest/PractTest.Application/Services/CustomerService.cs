@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using PractTest.Application.DTOs;
 using PractTest.Application.Interfaces.Customers;
+using PractTest.Application.Mappings;
 using PractTest.Domain.Entities;
 
 namespace PractTest.Application.Services
@@ -18,9 +19,12 @@ namespace PractTest.Application.Services
 
         public async Task<IEnumerable<CustomerDto>> GetAllCustomerAsync()
         {
-            var allCustomers = await _customerRepository.GetAllCustomersAsync();
-            var allCustomerDtos = _mapper.Map<IEnumerable<CustomerDto>>(allCustomers);
-            return allCustomerDtos;
+            var customerList = await _customerRepository.GetAllCustomersAsync();
+            if (customerList is null) return [];
+
+            //var allCustomerDtos = _mapper.Map<IEnumerable<CustomerDto>>(customerList);
+            var customerDtoList = customerList.ToList().ToDtos();
+            return customerDtoList;
         }
 
         public async Task<CustomerDto?> GetCustomerByIdAsync(int id)
@@ -28,7 +32,8 @@ namespace PractTest.Application.Services
             var customer = await _customerRepository.GetCustomerByIdAsync(id);
             if (customer is null) return null;
 
-            var customerDto = _mapper.Map<CustomerDto>(customer);
+            //var customerDto = _mapper.Map<CustomerDto>(customer);
+            var customerDto = customer.ToDto();
             return customerDto;
         }
 

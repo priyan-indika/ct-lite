@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|solutionrelative:practtest.application\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.application\\interfaces\\customers\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|solutionrelative:practtest.application\\interfaces\\customers\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.application\\mappings\\customermappingextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|solutionrelative:practtest.application\\mappings\\customermappingextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8EFBC25-9B2B-4902-98E8-3EFCC802FE4B}|PractTest.Infrastructure\\PractTest.Infrastructure.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.infrastructure\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8EFBC25-9B2B-4902-98E8-3EFCC802FE4B}|PractTest.Infrastructure\\PractTest.Infrastructure.csproj|solutionrelative:practtest.infrastructure\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.application\\interfaces\\customers\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4E6E75-3215-46A3-89B8-ADD21980BD50}|PractTest.Application\\PractTest.Application.csproj|solutionrelative:practtest.application\\interfaces\\customers\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D570E81-DA8E-4479-AF90-170D519F2C85}|PractTest.API\\PractTest.API.csproj|d:\\coding\\github\\ct-lite\\practtest01\\practtest\\practtest.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +66,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Program.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Program.cs",
@@ -82,7 +86,7 @@
               "RelativeDocumentMoniker": "PractTest.API\\Controllers\\CustomersController.cs",
               "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Controllers\\CustomersController.cs",
               "RelativeToolTip": "PractTest.API\\Controllers\\CustomersController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAqwGMAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAlwHoAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T10:31:10.939Z",
               "IsPinned": true,
@@ -96,7 +100,7 @@
               "RelativeDocumentMoniker": "PractTest.Application\\Services\\CustomerService.cs",
               "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Services\\CustomerService.cs",
               "RelativeToolTip": "PractTest.Application\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEAAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvxkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T10:36:54.55Z",
               "IsPinned": true,
@@ -110,7 +114,7 @@
               "RelativeDocumentMoniker": "PractTest.Infrastructure\\CustomerRepository.cs",
               "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Infrastructure\\CustomerRepository.cs",
               "RelativeToolTip": "PractTest.Infrastructure\\CustomerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T10:18:19.556Z",
               "IsPinned": true,
@@ -118,7 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "CustomerMappingExtensions.cs",
+              "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Mappings\\CustomerMappingExtensions.cs",
+              "RelativeDocumentMoniker": "PractTest.Application\\Mappings\\CustomerMappingExtensions.cs",
+              "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Mappings\\CustomerMappingExtensions.cs",
+              "RelativeToolTip": "PractTest.Application\\Mappings\\CustomerMappingExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T05:38:03.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Controllers\\OrdersController.cs",
@@ -131,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GlobalExceptionMiddleware.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Middleware\\GlobalExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Middleware\\GlobalExceptionMiddleware.cs",
@@ -144,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ValidationFilter.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Filters\\ValidationFilter.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Filters\\ValidationFilter.cs",
@@ -157,20 +174,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Interfaces\\Customers\\ICustomerService.cs",
               "RelativeDocumentMoniker": "PractTest.Application\\Interfaces\\Customers\\ICustomerService.cs",
-              "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Interfaces\\Customers\\ICustomerService.cs*",
-              "RelativeToolTip": "PractTest.Application\\Interfaces\\Customers\\ICustomerService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAbAAAAAAAAAA==",
+              "ToolTip": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Interfaces\\Customers\\ICustomerService.cs",
+              "RelativeToolTip": "PractTest.Application\\Interfaces\\Customers\\ICustomerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T10:19:58.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "APIResponse.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.API\\Shared\\APIResponse.cs",
               "RelativeDocumentMoniker": "PractTest.API\\Shared\\APIResponse.cs",
@@ -183,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CreateCustomerValidator.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\DTOValidations\\CreateCustomerValidator.cs",
               "RelativeDocumentMoniker": "PractTest.Application\\DTOValidations\\CreateCustomerValidator.cs",
@@ -196,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "OrderService.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Application\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "PractTest.Application\\Services\\OrderService.cs",
@@ -209,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Coding\\Github\\ct-lite\\PractTest01\\PractTest\\PractTest.Infrastructure\\AppDbContext.cs",
               "RelativeDocumentMoniker": "PractTest.Infrastructure\\AppDbContext.cs",
