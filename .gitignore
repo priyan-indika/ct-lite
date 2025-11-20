@@ -1,0 +1,11 @@
+PractTest/PractTest.API/bin/
+PractTest/PractTest.API/obj/
+PractTest/PractTest.APITest/bin/
+PractTest/PractTest.APITest/obj/
+PractTest/PractTest.Application/obj/
+PractTest/PractTest.Application/bin/
+PractTest/PractTest.Domain/bin/
+PractTest/PractTest.Domain/obj/
+PractTest/PractTest.Infrastructure/bin/
+PractTest/PractTest.Infrastructure/obj/
+PractTest/.vs/
